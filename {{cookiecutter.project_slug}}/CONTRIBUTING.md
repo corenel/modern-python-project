@@ -17,8 +17,8 @@ Include the following in your patch:
 - Configure git with your [username](https://docs.github.com/en/github/using-git/setting-your-username-in-git) and [email](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address).
 
   ```bash
-  $ git config --global user.name 'your name'
-  $ git config --global user.email 'your email'
+  git config --global user.name 'your name'
+  git config --global user.email 'your email'
   ```
 
 - Make sure you have a [GitHub account](https://github.com/join).
@@ -26,39 +26,39 @@ Include the following in your patch:
 - [Clone](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo#step-2-create-a-local-clone-of-your-fork) the main repository locally.
 
   ```bash
-  $ git clone https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
-  $ cd {{ cookiecutter.project_slug }}
+  git clone {{ cookiecutter.git_remote_repository }}
+  cd {{ cookiecutter.project_slug }}
   ```
 
 - Create a [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) virtual environment.
 
   ```bash
-  $ conda create -n {{ cookiecutter.project_slug }} python=3.7
-  $ conda activate {{ cookiecutter.project_slug }}
+  conda create -n {{ cookiecutter.project_slug }} python=3.7
+  conda activate {{ cookiecutter.project_slug }}
   ```
 
 - Upgrade `pip` and `setuptools`.
 
   ```bash
-  $ python -m pip install --upgrade pip setuptools
+  python -m pip install --upgrade pip setuptools
   ```
 
 - Install the development dependencies, then install `{{ cookiecutter.project_slug }}` in editable mode.
 
   ```bash
-  $ pip install -r requirements_dev.txt && pip install -e .
+  pip install -r requirements_dev.txt && pip install -e .
   ```
 
 - Install the `pre-commit` hooks.
 
   ```bash
-  $ pre-commit install
+  pre-commit install
   ```
 
 - Install the `commit-msg` hook.
 
   ```bash
-  $ ./tools/install_git_hooks.sh
+  ./tools/install_git_hooks.sh
   ```
 
 ### Start coding
@@ -66,8 +66,8 @@ Include the following in your patch:
 - Create a branch to identify the issue you would like to work on.
 
   ```bash
-  $ git fetch origin
-  $ git checkout -b your-branch-name origin/master
+  git fetch origin
+  git checkout -b your-branch-name origin/master
   ```
 
 - Using your favorite editor, make your changes.
