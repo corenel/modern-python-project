@@ -1,4 +1,4 @@
-# How to contribute to bdca-visionsense-server
+# How to contribute to {{ cookiecutter.project_slug }}
 
 Thank you for considering contributing to `{{ cookiecutter.project_slug }}`!
 

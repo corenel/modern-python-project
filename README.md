@@ -5,8 +5,9 @@ Yet another [Cookiecutter](https://github.com/cookiecutter/cookiecutter) templat
 ## Features
 
 - Testing setup with `unittest` and `python setup.py test` or `pytest`
-- [Tox](http://testrun.org/tox/) testing: Setup to easily test for Python 3.6 and newer
+- [Tox](https://tox.wiki/en/latest/) testing: Setup to easily test for Python 3.6 and newer
 - Git hooks for [pre-commit](https://pre-commit.com/) and commit-msg
+- [Sphinx](https://www.sphinx-doc.org/) docs: Documentation ready for generation with, for example, [Read the Docs](https://readthedocs.io/).
 - (optional) Command line interface using [Click](https://github.com/pallets/click)
 
 ## Quickstart
